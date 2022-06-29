@@ -13,6 +13,9 @@
 		</groups>
 		<classes>
 			<class name="com.store.testcases.LoginPageTest" />
+			<class name="com.store.testcases.InventoryPageTest" />
+			<class name="com.store.testcases.CartPageTest" />
+			<class name="com.store.testcases.CheckoutPageTest" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

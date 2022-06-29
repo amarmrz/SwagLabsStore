@@ -12,15 +12,15 @@
       </run>
     </groups>
     <classes>
-      <class name="com.store.testcases.LoginPageTest">
+      <class name="com.store.testcases.CheckoutPageTest">
         <methods>
           <include name="tearDown"/>
-          <include name="loadConfig"/>
-          <include name="afterSuite"/>
           <include name="setup"/>
-          <include name="loginTest" invocation-numbers="1"/>
+          <include name="loadConfig"/>
+          <include name="VerifyCheckOutTest" invocation-numbers="0"/>
+          <include name="afterSuite"/>
         </methods>
-      </class> <!-- com.store.testcases.LoginPageTest -->
+      </class> <!-- com.store.testcases.CheckoutPageTest -->
     </classes>
   </test> <!-- Smoke(failed) -->
 </suite> <!-- Failed suite [Suite] -->

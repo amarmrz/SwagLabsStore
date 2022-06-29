@@ -23,8 +23,14 @@ public class InventoryPage extends BaseClass {
 	@FindBy(xpath = "//div[@class='app_logo']")
 	private WebElement logo;
 
-	@FindBy(id = "item_4_img_link")
-	private WebElement product;
+	@FindBy(id="add-to-cart-sauce-labs-backpack")
+	private WebElement AddProductBtn;
+
+	@FindBy(xpath = "//a[@class='shopping_cart_link']")
+	private WebElement Busket;
+
+	// @FindBy(id = "//span[@class='shopping_cart_badge']")
+	// private WebElement productBudges;
 
 	public InventoryPage() {
 		PageFactory.initElements(getDriver(), this);
@@ -34,14 +40,24 @@ public class InventoryPage extends BaseClass {
 		return action.isDisplayed(getDriver(), logo);
 	}
 
-	public String getMyStoreTitle() {
-		String myStoreTitel = getDriver().getTitle();
-		return myStoreTitel;
+	public boolean ValidateManu() {
+		return action.isDisplayed(getDriver(), manuBtn);
 	}
 
 	public String getCurrURL() throws Throwable {
 		String homePageURL = action.getCurrentURL(getDriver());
 		return homePageURL;
+	}
+
+	public void ClickOnProduct() {
+		action.click(getDriver(), AddProductBtn);
+		action.fluentWait(getDriver(), AddProductBtn, 3);
+		// verification if budges appeared
+	}
+
+	public CartPage ClickOnBusket() {
+		action.click(getDriver(), Busket);
+		return new CartPage();
 	}
 
 }
