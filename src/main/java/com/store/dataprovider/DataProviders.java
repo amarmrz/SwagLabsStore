@@ -41,19 +41,19 @@ public class DataProviders {
 	}
 
 //Class --> AccountCreationPage  Test Case--> verifyCreateAccountPageTest	
-	@DataProvider(name = "email")
+	@DataProvider(name = "Info")
 	public Object[][] getEmail() {
 		// Totals rows count
-		int rows = obj.getRowCount("Email");
+		int rows = obj.getRowCount("Info");
 		// Total Columns
-		int column = obj.getColumnCount("Email");
+		int column = obj.getColumnCount("Info");
 		int actRows = rows - 1;
 
 		Object[][] data = new Object[actRows][column];
 
 		for (int i = 0; i < actRows; i++) {
 			for (int j = 0; j < column; j++) {
-				data[i][j] = obj.getCellData("Email", j, i + 2);
+				data[i][j] = obj.getCellData("Info", j, i + 2);
 			}
 		}
 		return data;
