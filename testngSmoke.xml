@@ -12,12 +12,14 @@
 			</run>
 		</groups>
 		<classes>
-			<!-- <class name="com.store.testcases.LoginPageTest" />
+			<class name="com.store.testcases.CheckoutPageTest" />
+			<class name="com.store.testcases.CheckoutPageTwoTest" />
 			<class name="com.store.testcases.InventoryPageTest" />
 			<class name="com.store.testcases.CartPageTest" />
-			<class name="com.store.testcases.CheckoutPageTest" /> -->
-			<class name="com.store.testcases.CheckoutPageTwoTest" />
-
+			<class name="com.store.testcases.CheckoutCompleteTest" />
+			<class name="com.store.testcases.EndToEndTest" />
+			<class name="com.store.testcases.LoginPageTest" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
+

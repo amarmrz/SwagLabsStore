@@ -23,11 +23,20 @@ public class InventoryPage extends BaseClass {
 	@FindBy(xpath = "//div[@class='app_logo']")
 	private WebElement logo;
 
-	@FindBy(id="add-to-cart-sauce-labs-backpack")
+	@FindBy(id = "add-to-cart-sauce-labs-backpack")
 	private WebElement AddProductBtn;
+
+	@FindBy(id = "add-to-cart-sauce-labs-bike-light")
+	private WebElement AddProductBtn1;
+
+	@FindBy(id = "add-to-cart-sauce-labs-bolt-t-shirt")
+	private WebElement AddProductBtn2;
 
 	@FindBy(xpath = "//a[@class='shopping_cart_link']")
 	private WebElement Busket;
+
+	@FindBy(xpath = "//*[@id=\"shopping_cart_container\"]/a/span")
+	private WebElement BusketBudges;
 
 	// @FindBy(id = "//span[@class='shopping_cart_badge']")
 	// private WebElement productBudges;
@@ -52,7 +61,16 @@ public class InventoryPage extends BaseClass {
 	public void ClickOnProduct() {
 		action.click(getDriver(), AddProductBtn);
 		action.fluentWait(getDriver(), AddProductBtn, 3);
-		// verification if budges appeared
+
+	}
+
+	public void ClickOnProducts() throws InterruptedException {
+		action.click(getDriver(), AddProductBtn);
+		Thread.sleep(1000);
+		action.click(getDriver(), AddProductBtn1);
+		Thread.sleep(1000);
+		action.click(getDriver(), AddProductBtn2);
+		Thread.sleep(1000);
 	}
 
 	public CartPage ClickOnBusket() {
@@ -60,4 +78,8 @@ public class InventoryPage extends BaseClass {
 		return new CartPage();
 	}
 
+	public int getBusketProductNumber() {
+		int Nbr = Integer.parseInt(BusketBudges.getText());
+		return Nbr;
+	}
 }

@@ -44,10 +44,9 @@ public class checkoutTwoPage extends BaseClass {
 		return finalUnitPrice / 100;
 	}
 
-	/**
-	 * public double ClickOnFinish() { String unitPrice1 = unitPrice.getText();
-	 * String unit = unitPrice1.replaceAll("[^a-zA-Z0-9]", ""); double
-	 * finalUnitPrice = Double.parseDouble(unit); return finalUnitPrice / 100; }
-	 */
+	public checkoutComplete ClickOnFinish() {
+		action.click(getDriver(), FinishBtn);
+		return new checkoutComplete();
+	}
 
 }
